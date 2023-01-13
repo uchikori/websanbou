@@ -52,6 +52,9 @@
 .text_color_orange{
     color: g.$color-orange !important;
 }
+.text_color_red{
+    color: g.$color-red !important;
+}
 //テキストサイズ
 .font_size150{
     font-size: 150%;
@@ -81,4 +84,7 @@
         display: none;
     }
 }
-//タイトルあしらい
+//ドロップシャドウ
+.drop-shadow{
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}

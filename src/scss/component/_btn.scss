@@ -1,7 +1,7 @@
 @use '../global' as g;
 .button{
         .header &{
-            width: 361px;
+            width: 360px;
             @include g.tab{
                 width: 36rem;
             }
@@ -11,10 +11,19 @@
             a{
                 padding: 16px 0;
                 @include g.tab{
-                    padding: 1.6rem;
+                    padding: 1.6rem 0;
                 }
                 @include g.sp{
-                    padding: 0.8rem;
+                    padding: 0.6rem 0;
+                }
+            }
+        }
+        .cta &{
+            width: 100%;
+            a{
+                padding: 21px 0;
+                @include g.small{
+                    padding: 3rem 0;
                 }
             }
         }
@@ -33,28 +42,45 @@
             filter: brightness(115%);
             transition: filter 0.3s ease;
         }
+        @include g.tab{
+            border-radius: 5px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        }
     }
     &__label {
-        @include g.font-style(20px, g.$color-white, 700, 1, 0);
         display: inline-block;
         margin-left: 8px;
-        @include g.tab{
-            font-size: 2rem;
+        .header &{
+            @include g.font-style(20px, g.$color-white, 700, 1, 0);
+            @include g.tab {
+                font-size: 1.6rem;
+                line-height: 1.5;
+            }
+            @include g.sp {
+                margin-left: 0.5rem;
+            }
         }
-        @include g.sp{
-            font-size: 1rem;
-            margin-left: 0.5rem;
+        .cta &{
+            @include g.font-style(24px, g.$color-white, 700, 1, 0);
+            @include g.small{
+                font-size: 1.6rem;
+            }
         }
     }
     &__icon {
         display: inline-block;
-        width: 32px;
         aspect-ratio: 1/1;
-        @include g.tab{
-            width: 3.2rem;
+        .header &{
+            width: 28px;
+            @include g.tab {
+                    width: 2.8rem;
+            }
         }
-        @include g.sp{
-            width: 2.4rem;
+        .cta &{
+            width: 50px;
+            @include g.small{
+                width: 3.2rem;
+            }
         }
         img {
             height: auto;

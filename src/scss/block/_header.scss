@@ -21,7 +21,10 @@
         }
     }
     &__button{
-
+        display: none;
+        @include g.tab{
+            display: block;
+        }
     }
     &.standby {
         position: fixed;

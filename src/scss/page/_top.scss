@@ -1,4 +1,6 @@
 @use '../global' as g;
+
+//メインビジュアル
 .mainVisual{
     width: 100%;
     height: 768px;
@@ -37,6 +39,181 @@
         }
     }
 }
-.body{
-    height: 1000px;
+
+//CTAエリア
+.cta{
+    width: 100%;
+    background-color:g.$color-blue;
+    padding: 40px 0;
+    position: relative;
+    &__title{
+        position:absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        z-index: 1;
+        @include g.font-style(40px, g.$color-dark, 900, 1, 0);
+        width: 673px;
+        aspect-ratio: 673/127;
+        @include g.pc{
+            width: 67.3rem;
+        }
+        @include g.small{
+            width: calc(359/428)*100%;
+        }
+        img{
+            height: auto;
+            
+        }
+        span{
+                @include g.font-style(140px, g.$color-red, 900, 1, 0);
+                transform: skew(-8deg) translateY(8px);
+                display: inline-block;
+        }
+    }
+    &__inner{
+        width: 962px;
+        margin: 0 auto;
+        @include g.pc{
+            width: calc(962/1200)*100%;
+        }
+        @include g.tab{
+            width: 100%;
+        }
+    }
+    &__price{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 0;
+        .arrowToLeft{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            aspect-ratio: 1/1;
+            @include g.pc{
+                width: 9rem;
+            }
+            @include g.sp{
+                width: 4rem;
+            }
+            img{
+                height: auto;
+                z-index: 1;
+            }
+        }
+    }
+}
+.ctaCard{
+    width: calc(441/962)*100%;
+    padding: 20px 14px 0;
+    background-color: g.$color-blue3;
+    border-radius: 10px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.25);
+    @include g.pc{
+        padding: 2rem 1.4rem 0;
+    }
+    @include g.tab{
+        padding: 2rem 1.6rem;
+    }
+    &__belt{
+        @include g.font-style(20px, g.$color-navy, 700, 1, 0);
+        width: 100%;
+        background-color: g.$color-white;
+        padding: 10px 0;
+        border-radius: 100vh;
+        display: inline-block;
+        vertical-align: middle;
+        @include g.pc{
+            font-size: 2rem;
+            padding: 1rem 0;
+        }
+        @include g.tab{
+            font-size: 1.4rem;
+            line-height: calc(16/14);
+            padding: 0.6rem 0;
+            border-radius: 4px;
+        }
+        .small{
+            font-size: calc(12/20)*100%;
+        }
+    }
+    &__body{
+        display: flex;
+        margin: 10px 7px 0;
+        justify-content: space-between;
+        @include g.pc{
+            margin: 1rem 0.7rem 0;
+        }
+        @include g.tab{
+            margin: 1.6rem 0 0;
+        }
+    }
+    &__title{
+        width: 80px;
+        height: 80px;
+        background-color: g.$color-navy;
+        padding: 10px;
+        @include g.font-style(30px, g.$color-white, 700, 1, 0);
+        border-radius: 8px;
+
+        @include g.pc{
+            width: 8rem;
+            height: 8rem;
+            padding: 0.8rem;
+            font-size: 3rem;
+            border-radius: 0.8rem;
+        }
+        @include g.sp{
+            width: 3.6rem;
+            height: 3.6rem;
+            padding: 0.4rem;
+            font-size: 1.4rem;
+            border-radius: 0.4rem;
+        }
+    }
+    &__price{
+        width: 316px;
+        aspect-ratio: 316/90;
+        word-wrap: break-word;
+        -webkit-box-flex: 1;
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        margin-top: 10px;
+        @include g.pc{
+            width: 31.6rem;
+            margin-top: 1rem;
+        }
+        @include g.sp{
+            width: 11.3rem;
+            margin-top: 0.5rem;
+        }
+        img{
+            height: auto;
+        }
+    }
+}
+.whiteBox{
+    width: 100%;
+    padding: 17px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    @include g.tab{
+        padding: 1.6rem;
+    }
+    @include g.sp{
+        
+    }
+    p{
+        @include g.font-style(14px, g.$color-dark, 700, 1.5, 0);
+        @include g.sp{
+            font-size: 1.2rem;
+        }
+    }
 }
