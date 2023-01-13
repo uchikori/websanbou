@@ -55,6 +55,9 @@
 .text_color_red{
     color: g.$color-red !important;
 }
+.text_color_blue{
+    color: g.$color-red !important;
+}
 //テキストサイズ
 .font_size150{
     font-size: 150%;
@@ -79,10 +82,10 @@
     text-transform: uppercase;
 }
 //背景色
-.tab-hidden{
-    @include g.tab{
-        display: none;
-    }
+.text_grad_blue{
+    background: linear-gradient(to bottom, #008AFE, #16ADDD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
 }
 //ドロップシャドウ
 .drop-shadow{

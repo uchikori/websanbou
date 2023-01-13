@@ -42,10 +42,11 @@ module.exports = {
       { 
         test: /\.scss/,
         use:[
-          // CSSファイルを書き出すオプションを有効にする
+          // CSSファイルを書き出すオプションを有効にする(build時に有効)
           // {
           //   loader: MiniCssExtractPlugin.loader,
           // },
+          //build時にはoFFにする
           "style-loader",
           {
             loader:"css-loader",
@@ -126,11 +127,11 @@ module.exports = {
       overrideExtension: true
     }),
 
-
-    // CSSファイルを外出しにするプラグイン
+    // CSSファイルを外出しにするプラグイン(build時に有効にする)
     // new MiniCssExtractPlugin({
     //   // ファイル名を設定します
     //   filename: "style.css",
     // }),
+
   ],
 };
