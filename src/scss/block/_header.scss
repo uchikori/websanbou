@@ -1,0 +1,48 @@
+@use '../global' as g;
+// ヘッダー
+.header{
+    width: 100%;
+    padding: 25px 0;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    @include g.sp{
+        padding: 1rem 0;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        @include g.tab{
+            justify-content: space-between;
+            gap: 0;
+        }
+    }
+    &__button{
+
+    }
+    &.standby {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        transform: translateY(-100%);
+    }
+
+    &.fixed {
+        transform: translateY(0%);
+    }
+}
+.logo{
+    @include g.font-style(16px, g.$color-black, 700, 1, 0);
+    @include g.sp{
+        font-size: 1.3rem;
+    }
+    span{
+        @include g.font-style(24px, g.$color-navy, 900, 1, 0);
+        display: inline-block;
+        @include g.sp{
+            font-size: 2rem;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB参謀</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 本番Build後に有効にする -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header js-fix-header js-header">
+            <div class="header__inner container">
+                <h1 class="header_logo">
+                    <a href="/">
+                        <div class="logo">
+                            クリエイティブな何でも屋<br><span class="mt-10">株式会社秋山工房</span>
+                        </div>
+                    </a>
+                </h1>
+                <div class="button header__button">
+                    <a href="#contact"><span class="button__icon"><img src="images/ion_mail.svg" alt=""></span><span class="button__label">お問い合わせ</span></a>
+                </div>
+            </div>
+        </header>
+
+        <section class="mainVisual">
+            <figure class="mainVisual__bg">
+                <picture class="mainVisual__image">
+                    <source media="(min-width: 857px)" type="image/webp" srcset="images/hero_bg_opt.webp 1x, images/hero_bg@2x_opt.webp 2x">
+                    <source media="(min-width: 857px)" type="image/jpeg" srcset="images/hero_bg_opt.jpg 1x, images/hero_bg@2x_opt.jpg 2x">
+                    <source media="(max-width: 856px)" type="image/webp" srcset="images/hero_bg_sp@2x_opt.webp">
+                    <source media="(max-width: 856px)" type="image/jpeg" srcset="images/hero_bg_sp@_opt2x.jpg">
+                    <img srcset="images/hero_bg_opt.jpg" src="images/hero_bg_opt.jpg" width="1920" height="768" alt="">
+                </picture>
+            </figure>
+            <div class="mainVisual__container container">
+                <div class="mainVisual__textBox">
+                    <h2 class="mainVisual__copy">
+                        <figure>
+                            <picture>
+                                <source media="(min-width: 857px)" type="image/webp" srcset="images/main_text_opt.webp 1x, images/main_text@2x_opt.webp 2x">
+                                <source media="(min-width: 857px)" type="image/jpeg" srcset="images/main_text_opt.jpg 1x, images/main_text@2x_opt.jpg 2x">
+                                <source media="(max-width: 856px)" type="image/webp" srcset="images/main_text_sp@2x_opt.webp">
+                                <source media="(max-width: 856px)" type="image/jpeg" srcset="images/main_text_sp@2x_opt.jpg">
+                                <img srcset="images/main_text_opt.jpg" src="images/main_text_opt.jpg" width="1200" height="718" alt="">
+                            </picture>
+                        </figure>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <div class="body"></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
