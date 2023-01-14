@@ -38,14 +38,28 @@
 }
 .logo{
     @include g.font-style(16px, g.$color-black, 700, 1, 0);
+    display: flex;
+    align-items: center;
+    gap: 9px;
     @include g.sp{
         font-size: 1.3rem;
     }
-    span{
+    &__text_blue{
         @include g.font-style(24px, g.$color-navy, 900, 1, 0);
         display: inline-block;
         @include g.sp{
             font-size: 2rem;
+        }
+    }
+    &__icon{
+        display: block;
+        width: 76px;
+        aspect-ratio: 76/60;
+        @include g.sp{
+            width: 7.6rem;
+        }
+        img{
+            height: auto;
         }
     }
 }

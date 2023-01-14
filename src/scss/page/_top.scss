@@ -226,6 +226,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @include g.sp{
+        padding: 60px 0 65px;
+    }
     &__inner{
         width: calc(811/1200)*100%;
         margin: 0 auto;
@@ -237,16 +240,16 @@
         }
     }
     &__title{
-        @include g.font-style(32px, g.$color-dark, 700, 2.5, 0);
+        @include g.font-style(32px, g.$color-dark, 700, 2.2, 0);
         @include g.pc{
             font-size: 3.2rem;
         }
         @include g.sp{
             font-size: 2rem;
-            list-style: 2.8;
+            line-height: 2.6;
         }
         .large{
-            font-size: calc(80/32)*100%;
+            font-size: calc(64/32)*100%;
             display: inline-block;
             line-height: 1;
             position: relative;
@@ -312,5 +315,283 @@
                 height: auto;
             }
         }
+    }
+}
+
+//アピールエリア
+.appeal{
+    width: 100%;
+    background-image: url("images/appeal__bg_opt.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 222px;
+    position: relative;
+    z-index: -2;
+    @include g.sp{
+        background-image: url("images/appeal__bg_sp_opt.png");
+        padding-bottom: 151px;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__mainText{
+        @include g.font-style(32px, g.$color-black, 700, 2, 0);
+        margin-top: 97px;
+        @include g.pc{
+            font-size: 3.2rem;
+        }
+        @include g.sp{
+            font-size: 2rem;
+            line-height: 1.5;
+            margin-top: 11.3rem;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 342px;
+                height: auto;
+                @include g.pc{
+                    width: 34.2rem;
+                }
+                @include g.sp{
+                    width: 16rem;
+                }
+            }
+        }
+    }
+    &__subText{
+        @include g.font-style(24px, g.$color-dark, 700, 1.95, 0);
+        margin-top: 30px;
+        position: relative;
+        @include g.pc{
+            font-size: 2.4rem;
+            margin-top: 3rem;
+        }
+        @include g.sp{
+            font-size: 2rem;
+            line-height: 1.5;
+            margin-top: 4.3rem;
+        }
+        &:before{
+            content: "";
+            display: block;
+            width: 8px;
+            height: 86px;
+            background-color: g.$color-black;
+            transform: skew(24deg);
+            position: absolute;
+            bottom: 0;
+            left: -40px;
+            @include g.pc{
+                width: 0.8rem;
+                height: 8.6rem;
+                left: -4rem;
+            }
+            @include g.sp{
+                display: none;
+            }
+        }
+        &:after{
+            content: "";
+            display: block;
+            width: 8px;
+            height: 86px;
+            background-color: g.$color-black;
+            transform: skew(-24deg);
+            position: absolute;
+            bottom: 0;
+            right: -40px;
+            @include g.pc{
+                width: 0.8rem;
+                height: 8.6rem;
+                right: -4rem;
+            }
+            @include g.sp {
+                display: none;
+            }
+        }
+        span{
+            color: g.$color-orange2;
+            &:after{
+                background-color:g.$color-orange2;
+            }
+        }
+    }
+}
+.gradArrow{
+    width: 462px;
+    padding: 35px 0;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #F7971E, #FFD200);
+    @include g.font-style(32px, g.$color-white, 900, 1.5, 0);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+    position: relative;
+    @include g.pc{
+        width: 46.2rem;
+        padding: 3.5rem 0;
+        font-size: 3.2rem;
+    }
+    @include g.tab{
+        font-size: 2.8rem;
+        padding: 3rem 0;
+    }
+    @include g.small{
+        width: 100%;
+    }
+    &:before{
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: solid 57px #FFD200;
+        border-left: solid 231px transparent;
+        border-right: solid 231px transparent;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.25));
+        z-index: -1;
+        @include g.pc{
+            border-top: solid 5.7rem #FFD200;
+            border-left: solid 23.1rem transparent;
+            border-right: solid 23.1rem transparent;
+        }
+        @include g.small{
+            border-left: solid 50vw transparent;
+            border-right: solid 50vw transparent;
+        }
+    }
+}
+
+//選ばれる理由
+.point{
+    width: 100%;
+    padding: 80px 0;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        @include g.font-style(32px, g.$color-black, 700, 1, 0);
+        display: flex;
+        align-items: center;
+        @include g.pc{
+            font-size: 3.2rem;
+        }
+        @include g.tab{
+            flex-direction: column;
+        }
+        @include g.sp{
+            font-size: 2rem;
+        }
+        .large{
+            font-size: calc(48/32)*100%;
+            display: inline-block;
+            line-height: 64/48;
+            @include g.tab{
+                line-height: 1;
+            }
+        }
+        img {
+            width: 342px;
+            height: auto;
+            margin-right: 10px;
+            @include g.pc {
+                width: 34.2rem;
+            }
+            @include g.tab{
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    &__items{
+        display: flex;
+        justify-content: center;
+        @include g.tab{
+            flex-wrap: wrap;
+        }
+        @include g.sp{
+            gap: 3rem;
+        }
+    }
+}
+.clearCard{
+    width: 384px;
+    padding: 20px 18px 20px 20px;
+    border-right: solid 2px #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include g.pc{
+        width: 38.4rem;
+        padding: 2rem 1.8rem 2rem 2rem;
+    }
+    @include g.tab{
+        border-right: none;
+        padding: 2rem;
+    }
+    &:last-child{
+        border-right: none;
+        padding: 20px;
+    }
+    &__thumbnail{
+        width: 250px;
+        aspect-ratio: 1/1;
+        position: relative;
+        @include g.pc{
+            width: 25rem;
+        }
+        img{
+            height: auto;
+        }
+        figcaption{
+            display: block;
+            width: 114px;
+            aspect-ratio: 1/1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #008AFE, #16ADDD);
+            @include g.font-style(20px, g.$color-white, 700, 1, 0);
+            position: absolute;
+            top: -20px;
+            left: -26px;
+            border-radius: 100%;
+            @include g.pc{
+                width: 11.4rem;
+                font-size: 2rem;
+            }
+            span{
+                @include g.font-style(48px, g.$color-white, 700, 1, 0);
+                transform: skew(-8deg);
+                @include g.pc{
+                    font-size: 4.8rem;
+                }
+            }
+        }
+    }
+    &__title{
+        @include g.font-style(18px, g.$color-blue, 700, 1.5, 0);
+        @include g.pc{
+            font-size: 1.8rem;
+        }
+        span{
+            display: inline-block;
+            padding: 0 4px;
+            background-color: #FFEB83;
+            margin-top: 10px;
+        }
+    }
+    &__text{
+        @include g.font-style(14px, g.$color-dark, 500, 2, 0);
     }
 }
