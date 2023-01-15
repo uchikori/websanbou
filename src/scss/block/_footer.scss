@@ -113,7 +113,7 @@
     position: fixed;
     right: 4rem;
     bottom: 4rem;
-
+    z-index: 100;
     @include g.tab{
         display: none;
     }

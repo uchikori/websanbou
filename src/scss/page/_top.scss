@@ -33,6 +33,7 @@
         display: flex;
         align-items: flex-end;
         @include g.tab{
+            width: calc(412/428)*100% !important;
             position: absolute;
             right: 0;
             bottom: 0;
@@ -227,6 +228,7 @@
     background-position: center;
     background-size: cover;
     @include g.sp{
+        background-image: url("images/problem__bg_sp_opt.jpg");
         padding: 60px 0 65px;
     }
     &__inner{
@@ -593,5 +595,240 @@
     }
     &__text{
         @include g.font-style(14px, g.$color-dark, 500, 2, 0);
+    }
+}
+
+//サービス内容
+.service{
+    width: 100%;
+    padding: 120px 0 140px;
+    background-image: url("images/service__bg_opt.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include g.sp{
+        background-image: url("images/service__bg_sp_opt.jpg");
+        padding: 12rem 0 10rem;
+    }
+    &:before{
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: solid 70px g.$color-white;
+        border-left: solid 192px transparent;
+        border-right: solid 192px transparent;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @include g.sp{
+            border-top: solid 68px g.$color-white;
+            border-left: solid 11rem transparent;
+            border-right: solid 11rem transparent;
+        }
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        @include g.font-style(32px, g.$color-black, 700, 2, 0);
+        display: flex;
+        align-items: center;
+        @include g.pc {
+            font-size: 3.2rem;
+        }
+        @include g.tab {
+            flex-direction: column;
+        }
+        @include g.sp {
+            font-size: 2rem;
+            line-height: 1.5;
+        }
+        img {
+            width: 342px;
+            height: auto;
+            margin-right: 10px;
+            @include g.pc {
+                width: 34.2rem;
+            }
+            @include g.tab {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    &__text{
+        @include g.font-style(16px, g.$color-black, 700, 2, 0);
+    }
+    &__types{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 120px;
+        position: relative;
+        @include g.tab{
+            flex-direction: column;
+            align-items: center;
+        }
+        .plus {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            aspect-ratio: 1/1;
+            z-index: 10;
+            @include g.pc {
+                width: 9rem;
+            }
+
+            @include g.tab{
+                position: static;
+                transform: translate(0, 0);
+                margin-top: 2rem;
+            }
+    
+            img {
+                height: auto;
+                
+            }
+        }
+    }
+}
+.cardWithList{
+    width: calc(570/1200)*100%;
+    background-color: g.$color-blue;
+    padding: 40px 35px;
+    border-radius: 40px;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.25);
+    @include g.pc{
+        padding: 4rem 3.5rem;
+        border-radius: 4rem;
+        min-height: 80rem;
+    }
+    @include g.tab{
+        width: 57rem;
+        min-height: 0;
+        &:last-child{
+            margin-top: 11rem;
+        }
+    }
+    @include g.small{
+        width: 100%;
+    }
+    @include g.sp{
+        padding: 4rem 1.6rem;
+        
+    }
+    &:before{
+        content: "";
+        display: block;
+        width: calc(240/570)*100%;
+        aspect-ratio: 1/1;
+        background-color: g.$color-blue;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -90px);
+        z-index: -1;
+        @include g.pc{
+            transform: translate(-50%, -9rem);
+        }
+        @include g.sp{
+            width: calc(240/396)*100%;
+        }
+    }
+    &__icon{
+        width: 100px;
+        aspect-ratio: 1/1;
+        position: relative;
+        z-index: 1;
+        margin-top: -110px;
+        @include g.pc{
+            width: 10rem;
+            margin-top: -11rem;
+        }
+    }
+    &__title{
+        @include g.font-style(32px, g.$color-white, 700, 1, 0);
+        @include g.pc{
+            font-size: 3.2rem;
+        }
+    }
+    &__text{
+        @include g.font-style(18px, g.$color-white, 700, 1.5, 0);
+        margin-top: 22px;
+        @include g.pc{
+            font-size: 1.8rem;
+        }
+        span{
+            color: g.$color-blue;
+            display: inline-block;
+            padding: 0 1px;
+            background-color: #FFEB83;
+        }
+    }
+    &__list{
+        width: 100%;
+    }
+    &__item{
+        display: flex;
+        align-items: flex-start;
+        padding: 10px;
+        background-color: #f5f5f5;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        margin-top: 20px;
+        @include g.pc{
+            padding: 1rem;
+        }
+        img{
+            width: 30px;
+            aspect-ratio: 1/1;
+            margin-right: 10px;
+            @include g.pc{
+                width: 3rem;
+                margin-right: 1rem;
+            }
+            @include g.sp{
+                width: 2.4rem;
+            }
+        }
+        p{
+            @include g.font-style(20px, g.$color-black, 700, 1.5, 0);
+            @include g.pc{
+                font-size: 2rem;
+            }
+            @include g.sp{
+                font-size: 1.6rem;
+            }
+        }
+    }
+    &__captions{
+        td{
+            @include g.font-style(14px, g.$color-white, 500, 1.5, 0);
+            @include g.pc{
+                font-size: 1.4rem;
+            }
+            @include g.sp{
+                font-size: 1.2rem;
+            }
+            &:first-child{
+                padding-right: 5px;
+                @include g.pc{
+                    padding-right: 0.5rem;
+                }
+            }
+        }
     }
 }
