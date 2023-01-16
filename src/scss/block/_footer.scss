@@ -114,6 +114,10 @@
     right: 4rem;
     bottom: 4rem;
     z-index: 100;
+    display: none;
+    .front-page &{
+        display: block;
+    }
     @include g.tab{
         display: none;
     }
