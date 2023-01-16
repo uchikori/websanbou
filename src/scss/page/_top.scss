@@ -832,3 +832,162 @@
         }
     }
 }
+
+//比較表
+.comparision{
+    width: 100%;
+    padding: 80px 0 100px;
+    background-image: url("images/comparision__bg_opt.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include g.sp{
+        padding: 8rem 0 9.4rem;
+        background-image: url("images/comparision__bg_sp_opt.jpg");
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        @include g.font-style(40px, g.$color-black, 700, 1, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include g.pc{
+            font-size: 4rem;
+        }
+        @include g.sp{
+            font-size: 2rem;
+            line-height: 1.5;
+        }
+        img{
+            width: 512px;
+            height: auto;
+            filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+            margin-top: 22px;
+            @include g.pc{
+                width: 51.2rem;
+            }
+            @include g.sp{
+                width: 25.6rem;
+            }
+        }
+    }
+    &__table{
+        margin-top: 17px;
+        @include g.pc{
+            margin-top: 1.7rem;
+        }
+        @include g.sp{
+            margin-top: 2.6rem;
+        }
+    }
+}
+
+//お問い合わせ
+.contact{
+    width: 100%;
+    padding: 140px 0 40px;
+    .front-page &{
+        padding: 70px 0 100px;
+        background-image: url("images/contact__bg_opt.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include g.sp {
+            padding: 5.4rem 0 8rem;
+            background-image: url("images/contact__bg_sp_opt.jpg");
+        }
+    }
+
+
+    &__inner {
+        width: calc(840/1200)*100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include g.tab{
+            width: 100%;
+        }
+    }
+    &__title{
+
+        @include g.font-style(24px, g.$color-black, 700, 2, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .front-page & {
+            font-size: 40px;
+            color: g.$color-white;
+            line-height: 1;
+            @include g.pc {
+                font-size: 4rem;
+            }
+        
+            @include g.small {
+                font-size: 3rem;
+            }
+        }
+
+        .titleWithFukidashiLine{
+            font-size: calc(24/40)*100%;
+            line-height: calc(40/24);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 24px;
+            @include g.small{
+                font-size: calc(20/30)*100%;
+                line-height: 1.5;
+                margin-bottom: 2rem;
+            }
+            &:before {
+                content: "";
+                display: block;
+                width: 12px;
+                height: 48px;
+                background-color: g.$color-white;
+                transform: skew(24deg);
+                position: absolute;
+                bottom: 0;
+                left: -40px;
+        
+                @include g.pc {
+                    width: 1.2rem;
+                    height: 4.8rem;
+                    left: -4rem;
+                }
+                @include g.sp {
+                    width: 0.6rem;
+                    height: 5.4rem;
+                    left: -2.8rem;
+                }
+            }
+        
+            &:after {
+                content: "";
+                display: block;
+                width: 12px;
+                height: 48px;
+                background-color: g.$color-white;
+                transform: skew(-24deg);
+                position: absolute;
+                bottom: 0;
+                right: -40px;
+        
+                @include g.pc {
+                    width: 1.2rem;
+                    height: 4.8rem;
+                    right: -4rem;
+                }
+                @include g.sp {
+                    width: 0.6rem;
+                    height: 5.4rem;
+                    right: -2.8rem;
+                }
+            }
+        }
+    }
+}

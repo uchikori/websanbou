@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB参謀</title>
+    <title>WEB参謀 | クリエイティブな何でも屋 秋山工房</title>
+    <meta name="description" content="">
+    <link rel="icon" href="./favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <!-- 本番Build後に有効にする -->
     <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-<body>
+<body class="front-page">
     <div class="wrapper">
         <header class="header js-fix-header js-header">
             <div class="header__inner container">
@@ -260,7 +262,7 @@
                     <img src="images/websanbou.svg" width="342" height="64" loading="lazy" alt="WEB参謀">
                     <span>のサービス内容</span>
                 </h2>
-                <p class="service__text align-center mt-20">下記は対応可能作業の一例です、<br class="">是非お気軽に何でもご相談ください。</p>
+                <p class="service__text align-center mt-20">下記は対応可能作業の一例です、<br class="br-tab">是非お気軽に何でもご相談ください。</p>
                 <div class="service__types">
                     <div class="cardWithList">
                         <figure class="cardWithList__icon"><img src="images/ph_chats-fill.svg" width="100" height="100" loading="lazy" alt=""></figure>
@@ -426,6 +428,92 @@
         
         </section>
         <!-- ▲CTAエリア -->
+
+        <!-- ▼比較表 -->
+        <section class="comparision">
+            <div class="comparision__inner container">
+                <h2 class="comparision__title align-center">
+                    <span>比べてみると</span>
+                    <img src="images/comparision__title.svg" width="498" height="77" loading="lazy" alt="違いが一目瞭然！">
+                </h2>
+                <figure class="comparision__table">
+                    <picture>
+                        <source media="(min-width: 857px)" type="image/svg+xml" srcset="images/table.svg">
+                        <source media="(max-width: 856px)" type="image/svg+xml" srcset="images/table_sp.svg">
+                        <img src="images/table.svg" width="1200" height="797" loading="lazy"
+                            alt="他のサービスと比較した際の「WEB参謀」の質の良さを示している比較表">
+                    </picture>
+                </figure>
+            </div>
+        </section>
+        <!-- ▲比較表 -->
+
+        <!-- ▼お問い合わせフォーム -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact__inner">
+                    <h2 class="contact__title align-center">
+                        <span class="titleWithFukidashiLine">まずはお気軽に現在のお悩み等を<br class="br-small">お聞かせください！</span>
+                        <span>お問い合わせフォーム</span>
+                    </h2>
+                    <div class="contact__form form mt-40">
+                        <div class="formProgress">
+                            <div class="formProgress__item align-center">
+                                必須項目<br class="br-small">の入力
+                            </div>
+                            <span class="formProgress__Arrow"></span>
+                            <div class="formProgress__item align-center">
+                                入力内容<br class="br-small">の確認
+                            </div>
+                            <span class="formProgress__Arrow"></span>
+                            <div class="formProgress__item align-center">
+                                送信完了
+                            </div>
+                        </div>
+                        <div class="mw_wp_form mw_wp_form_input">
+                            <form method="post">
+
+                                <div class="form__body mt-30">
+                                    <div class="formInput">
+                                        <label class="formInput__label">貴社名<span class="hissu">必須</span></label>
+                                        <input type="text" name="companyName" class="companyName">
+                                    </div>
+                                    <div class="formInput">
+                                        <label class="formInput__label">担当者氏名<span class="hissu">必須</span></label>
+                                        <input type="text" name="name" class="name">
+                                    </div>
+                                    <div class="formInput">
+                                        <label class="formInput__label">担当者役職<span>任意</span></label>
+                                        <input type="text" name="post" class="post">
+                                    </div>
+                                    <div class="formInput">
+                                        <label class="formInput__label">電話番号<span class="hissu">必須</span></label>
+                                        <input type="text" name="telNumber" class="telNumber">
+                                    </div>
+                                    <div class="formInput">
+                                        <label class="formInput__label">メールアドレス<span class="hissu">必須</span></label>
+                                        <input type="email" name="email" class="email">
+                                    </div>
+                                    <div class="formInput">
+                                        <label class="formInput__label">現在のお困りごと<span>任意</span></label>
+                                        <input type="text" name="onayami" class="onayami">
+                                    </div>
+                                    <div class="formInput">
+                                        <label class="formInput__label">お問い合わせ内容<span class="hissu">必須</span></label>
+                                        <textarea name="message" id="" cols="30" rows="12"></textarea>
+                                    </div>
+                                    <div class="formSubmit mt-40">
+                                        <input type="submit" name="submitConfirm" class="confirm" value="入力内容を確認">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ▲お問い合わせフォーム -->
 
         <footer class="footer">
             <div class="fixedCta">
