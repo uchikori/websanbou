@@ -117,10 +117,11 @@
     display: none;
     .front-page &{
         display: block;
+        @include g.tab {
+            display: none;
+        }
     }
-    @include g.tab{
-        display: none;
-    }
+
     &__button{
         width: 360px;
         filter: brightness(100%);

@@ -478,8 +478,11 @@ a[href^="tel:"] {
 .header__button {
   display: none;
 }
+.header__button .front-page {
+  display: none;
+}
 @media only screen and (max-width: 856px) {
-  .header__button {
+  .header__button .front-page {
     display: block;
   }
 }
@@ -743,7 +746,7 @@ a[href^="tel:"] {
   display: block;
 }
 @media only screen and (max-width: 856px) {
-  .fixedCta {
+  .front-page .fixedCta {
     display: none;
   }
 }

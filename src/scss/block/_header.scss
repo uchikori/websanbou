@@ -25,8 +25,11 @@
     }
     &__button{
         display: none;
-        @include g.tab{
-            display: block;
+        .front-page{
+            display: none;
+            @include g.tab {
+                display: block;
+            }
         }
     }
     &.standby {
